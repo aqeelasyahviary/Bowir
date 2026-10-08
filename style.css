@@ -7,20 +7,17 @@ h1{
 body{
   background-color: #0E035C;
     border: 5px solid red;
-     border-radius: 10px
+     border-radius: 10px;
     }
 p{
   text-align: center;
   color: white;
  }
-ul{
-  list-style-type: none;
-   color: white
-  }
-li{
-  display: inline;
-   padding: 50px
-  }
+ul li a,
+ul li a:visited{
+  color: white;
+  text-decoration: none;
+}
 marquee{
-  color: white
+  color: white;
        }
