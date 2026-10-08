@@ -17,10 +17,11 @@ p{
 ul{
   list-style-type: none;
    color: white;
+  text-align: center;
   }
 li{
   display: inline;
-   padding: 0px 20px;
+   padding: 0px;
   }
 ul li a,
 ul li a:visited{
