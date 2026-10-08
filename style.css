@@ -7,13 +7,18 @@ h1{
   }
 body{
   background-color: #FFDAAB;
-    border: 5px solid #5C4816;
-     border-radius: 10px;
     }
+.container{
+  max-width: 800px;
+  margin: 30px auto;          /* Mengetengahkan kotak */
+  border: 5px solid #5C4816;  /* Garis border */
+  border-radius: 10px;        /* Lengkungan sudut */
+  padding: 20px;              /* Jarak isi ke garis border */
+}
 p{
   text-align: center;
   color: white;
-  font-family: monaco, monospace
+  font-family: monaco, monospace;
  }
 ul{
   list-style-type: none;
