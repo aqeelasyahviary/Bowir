@@ -3,16 +3,17 @@ h1{
   text-align: center;
   font-weight: bold;
   color: red;
+  font-family: Copperplate, fantasy;
   }
 body{
   background-color: #0E035C;
     border: 5px solid red;
      border-radius: 10px;
-  font-family: Copperplate, Papyrus, fantasy;
     }
 p{
   text-align: center;
   color: white;
+  font-family: monaco, monospace
  }
 ul{
   list-style-type: none;
@@ -31,4 +32,5 @@ ul li a:visited{
 }
 marquee{
   color: white;
+  font-family: 'Courier New', monospace
        }
