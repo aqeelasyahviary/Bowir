@@ -1,52 +1,200 @@
-html 
-h1{
+/* --- Reset & Base Body --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* OPSI 1: Latar belakang warna solid + pola titik halus */
+  background-color: #FFD990;
+  background-image: radial-gradient(#5C4816 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  color: #3e300d;
+}
+
+/* --- Container utama --- */
+.container {
+  max-width: 800px;
+  margin: 20px auto;          
+  border: 4px solid #5C4816;  
+  border-radius: 16px;        
+  padding: 30px 25px;              
+  background-color: #ffe8b8; /* Sedikit terang agar kontras dengan background body */
+  box-shadow: 0 10px 25px rgba(92, 72, 22, 0.2);
+}
+
+/* --- Animasi Muncul Halus (Fade-in) --- */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Judul Utama --- */
+h1 {
   text-align: center;
   color: #5C4816;
   font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
   font-weight: 700;        
-  letter-spacing: 2px;     
-  font-size: 2.2rem;       
-  }
-body{
-  background-color: #FFD990;
-    }
-.container{
-  max-width: 800px;
-  margin: 30px auto;          
-  border: 5px solid #5C4816;  
-  border-radius: 10px;        
-  padding: 20px;              
+  letter-spacing: 3px;     
+  font-size: 2.5rem;
+  margin-top: 0;
 }
-p{
+
+/* --- Navigasi --- */
+.nav-menu {
   text-align: center;
-  color: #5C4816;
-  font-family: monaco, monospace;
- }
-ul{
+  margin-bottom: 25px;
+}
+
+ul {
   list-style-type: none;
-  color: #5C4816;
-  padding: 10px 20px;
+  background-color: #f7ce7f;
+  padding: 8px 16px;
   border: 3px solid #856822;
-  border-radius: 12px;
-  display: inline-block;
-  }
-li{
+  border-radius: 25px;
+  display: inline-flex;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+li {
   display: inline;
-  margin: 0px 20px
-  }
-ul li a,
-ul li a:visited{
+}
+
+ul li a {
   color: #5C4816;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-weight: 600;          
   font-size: 1rem;
+  padding: 6px 16px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
-img{
+
+/* Efek Hover tombol navigasi */
+ul li a:hover {
+  background-color: #5C4816;
+  color: #FFD990;
+}
+
+/* Tombol Aktif */
+ul li a.active {
+  background-color: #856822;
+  color: #fff;
+}
+
+/* --- Image Logo & Animasi Floating --- */
+.logo-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo-img {
   display: block;
-  margin: 0px auto
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  width: 450px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  /* Animasi melayang halus */
+  animation: float 4s ease-in-out infinite;
 }
-marquee{
+
+.logo-img:hover {
+  transform: scale(1.03);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- Kartu / Section Box --- */
+.section-card {
+  background: #fff6e3;
+  border: 2px solid #856822;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+h2, h3, h4 {
   color: #5C4816;
-  font-family: 'Courier New', monospace
-       }
+  margin-top: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  border-bottom: 2px stroke #856822;
+}
+
+p {
+  color: #4a3a11;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+/* --- Canva Embed Frame --- */
+.canva-embed {
+  position: relative; 
+  width: 100%; 
+  height: 0; 
+  padding-top: 56.25%;
+  margin-top: 1em; 
+  margin-bottom: 0.5em; 
+  overflow: hidden;
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.canva-embed iframe {
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  top: 0; 
+  left: 0; 
+  border: none;
+}
+
+.credit {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #666;
+}
+
+.credit a {
+  color: #5C4816;
+  font-weight: bold;
+}
+
+/* --- List Anggota --- */
+.member-list {
+  padding-left: 20px;
+  color: #5C4816;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* --- Marquee --- */
+.footer-marquee {
+  color: #5C4816;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  margin-top: 15px;
+}
